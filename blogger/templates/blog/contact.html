@@ -1,0 +1,21 @@
+{% extends 'blog/layout.html' %}
+{% block title %} Contact {% endblock %}
+
+{% block content %}
+	<form class="form" method="post">
+	<h1>Contact Us</h1>
+	<div>
+	<label>Name:</label>
+	<input type="text" placeholder="Please input your name" required>
+	</div>
+	<div>
+	<label>Email:</label>
+	<input type="email" placeholder="Please provide a valid email" required>
+	</div>
+	
+	<label>Message:</label>
+	<div>
+	<textarea name="message" placeholder="What is your message" rows="8" cols="80"></textarea>
+	</div>
+</form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'blog/layout.html' %}
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+	<div id="banner">	
+	</div>
+
+	<div>
+		<h3>Latest Posts</h3>
+		<ul>
+			{% for post in posts %}
+				<li><a href="/post/{{post.id}}}"> {{post.title}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %} Titles {% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+	<nav id="main-nav">
+			<a href="{% url 'home' %}">Home</a>
+			<a href="{% url 'post' %}">Blog</a>
+			<a href="{% url 'contact' %}">Contact Us</a>
+			<a href="{% url 'about' %}">About Us</a>
+		</nav>
+	<section>
+		{% block content %}
+
+		{% endblock %}
+	</section>
+	<div>
+		<a href="/admin" target="_blank">Admin Login</a>
+	</div>
+	<footer>
+		<p>This is the footer for everything</p>
+	</footer>
+</body>
+</html>
+
+
